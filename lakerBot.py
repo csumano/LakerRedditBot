@@ -1,10 +1,12 @@
 import praw
 import time
+import config
+
 
 def bot_login():
     print("Loging in...")
     lb = praw.Reddit(user_agent='LakerBot v0.1', client_id='8pjabuPyk3Y-EA',
-                  client_secret='QRHaLpZnXHq4j4lQyfIbM2lDGmw',username='OswegoBot', password='lilpumpave')
+                  client_secret='QRHaLpZnXHq4j4lQyfIbM2lDGmw',username='OswegoBot', password=config.password)
     print("Succesful login")
     return lb
 
